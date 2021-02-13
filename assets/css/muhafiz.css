@@ -1,0 +1,28 @@
+.nav-link.active {
+    color: #019AFF !important;
+}
+
+.btn-outline-danger {
+    color: #019AFF !important;
+    border-color: #019AFF !important;
+}
+
+.btn-outline-danger:hover {
+    color: #fff !important;
+    background-color: #019AFF;
+    border-color: #019AFF;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #019AFF;
+    border-color: #019AFF;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #019AFF;
+    border-color: #019AFF;
+}
