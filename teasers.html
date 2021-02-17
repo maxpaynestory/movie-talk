@@ -63,9 +63,7 @@
         <div class="container">
           <div class="row">
             <dv class="col-12">
-              <video controls autoplay loop muted style="margin: 0 auto; width: 70%; display: block;">
-                <source src="https://github.com/maxpaynestory/movie-talk/releases/download/videos-version-2/e-muhafiz-teaser-02.mp4" type="video/mp4">
-                <source src="https://github.com/maxpaynestory/movie-talk/releases/download/videos-version-3/e-muhafiz-teaser-05.mp4" type="video/mp4">
+              <video id="videoPlayer" controls style="margin: 0 auto; width: 70%; display: block;">
                 Your browser does not support the video tag.
               </video>
             </dv>  
@@ -109,6 +107,34 @@
     <script src="vendors/is/is.min.js"></script>
     <script src="//polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+      let videoSource = new Array();
+      videoSource[0] = 'https://github.com/maxpaynestory/movie-talk/releases/download/videos-version-2/e-muhafiz-teaser-02.mp4';
+      videoSource[1] = 'https://github.com/maxpaynestory/movie-talk/releases/download/videos-version-3/e-muhafiz-teaser-05.mp4';
+      let i = 0; // global
+      const videoCount = videoSource.length;
+      const element = document.getElementById("videoPlayer");
+
+      function videoPlay(videoNum) {
+          element.setAttribute("src", videoSource[videoNum]);
+          element.autoplay = true;
+          element.load();
+          element.play();
+      }
+      document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
+
+      videoPlay(0); // play the video
+
+      function myHandler() {
+          i++;
+          if (i == videoCount) {
+              i = 0;
+              videoPlay(i);
+          } else {
+              videoPlay(i);
+          }
+      }
+    </script>
     <!-- Google Analytics -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
