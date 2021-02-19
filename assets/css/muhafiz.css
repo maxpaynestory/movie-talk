@@ -26,3 +26,12 @@
     background-color: #019AFF;
     border-color: #019AFF;
 }
+
+.carousel-indicators {
+ justify-content: center;
+ margin-bottom: 20px;
+}
+
+.carousel-indicators li {
+    background-color: #019AFF;
+}
