@@ -27,6 +27,16 @@
     border-color: #019AFF;
 }
 
+.btn-green {
+    background-color: #3bca23;
+    border-color: #26a30f;
+}
+
+.btn-green:hover {
+    background-color: #26a30f;
+    border-color: #3bca23;
+}
+
 .carousel-indicators {
     justify-content: center;
     margin-bottom: 20px;
